@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Form = (props) => {
-  console.log(props)
   return (
     <form onSubmit={event => props.handleSubmit(event)}>
       <label>

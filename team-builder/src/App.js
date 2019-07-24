@@ -10,8 +10,8 @@ function App() {
   const handleSubmit = event => {
     event.preventDefault();
     team.push(user);
-    console.log(team, 'team');
     setTeam(team);
+    setUser({name: '', email: '', role: ''});
   };
 
   const handleChange = event => {
