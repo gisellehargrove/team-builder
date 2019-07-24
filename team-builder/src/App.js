@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import Form from './components/Form/Form.js';
+import TeamList from './components/Team/TeamList.js';
 import './App.css';
 
 function App() {
+  const [team, setTeam] = useState([]);
   const [user, setUser] = useState({name: '', email: '', role: ''});
 
   const handleSubmit = event => {
     event.preventDefault();
+    team.push(user);
+    console.log(team, 'team');
+    setTeam(team);
   };
 
   const handleChange = event => {
@@ -15,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <TeamList team={team} />
       <Form
         handleSubmit={handleSubmit}
         handleChange={handleChange}

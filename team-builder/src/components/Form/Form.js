@@ -10,7 +10,7 @@ const Form = (props) => {
           type="text"
           value={props.user.name}
           name="name"
-          onChange={event => props.onChange(event)} />
+          onChange={event => props.handleChange(event)} />
       </label>
 
       <label>
@@ -19,8 +19,10 @@ const Form = (props) => {
           type="text"
           value={props.user.email}
           name="email"
-          onChange={event => props.onChange(event)} />
+          onChange={event => props.handleChange(event)} />
       </label>
+
+      <button>Submit</button>
     </form>
 
   );
